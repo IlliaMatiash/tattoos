@@ -1,0 +1,17 @@
+@import 'vars';
+
+@mixin size($width: auto, $height: auto){
+    width: $width;
+    height: $height;
+}
+
+@mixin font($fontFamily, $fontSize){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+
+@mixin display($display, $justify-content){
+    display: $display;
+    justify-content: $justify-content;
+}
+

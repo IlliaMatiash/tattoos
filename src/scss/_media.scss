@@ -1,0 +1,328 @@
+@import "vars";
+@import "mixin";
+@media (min-width: 320px) {
+    .container{
+        max-width: 100%;
+    }
+    section{
+        padding: 20px 0;
+    }
+    .section-header{
+        text-align: center;
+        h2{
+            font-size: 41px;
+        }
+    }
+    .col{
+        margin: 0 auto;
+    }
+    // header
+    .nav{
+        display: none;
+    }
+    .social-networks{
+        display: block;
+        height: auto;
+    }
+    // end header
+    // artists
+    .artists{
+        .col{
+            margin-bottom: 20px;
+        }
+    }
+    // end artists
+    // design
+    .design{
+        padding: 35px 0;
+        .col{
+            margin: 15px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-text{
+            margin-left: 30px;
+        }
+    }
+    // end design
+    // work
+    .work{
+        .col-left,
+        .col-right{
+            width: 100%;
+            .col{
+                width: 45%;
+                margin: 10px 0;
+            }
+        }
+        h4{
+            text-align: center;
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+    // end work
+
+    //instagram collective work
+      .grid-sizer,
+      .grid-item {
+        @include size(49%, 130px);
+      }
+      
+      .grid-item {
+        float: left;
+      }
+      
+      .grid-item img {
+        max-width: 100%;
+      }
+      
+      .grid-item--width2{
+        display: none;
+      }
+    // end instagram collective work
+      //  adress 
+    .adress{
+        .col{
+            width: 100%;
+        }
+    }
+    .our{
+    padding: 20px 20px;
+    } // end adress
+
+    //   footer
+    .footer{
+        p{
+            margin: 10px 0;
+        }
+    }
+    // end footer
+    
+}
+
+@media (min-width: 420px){
+    // instagram collective work
+    .grid-sizer,
+    .grid-item {
+      height: 200px;
+    }// end instagram collective work
+}
+
+@media (min-width: 576px) {
+    .container{
+        max-width: 540px;
+    }
+    // artists
+    .artists{
+        .col{
+            width: 45%;
+        }
+    }
+    // end artists
+    // instagram collective work
+    .grid-sizer,
+    .grid-item {
+      height: 250px;
+    }// end instagram collective work
+}
+  
+@media (min-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+    // design
+    .design{
+        padding: 35px 0;
+        .col{
+            margin: 0;
+            width: 33.3333%;
+            flex-direction: column;
+            text-align: center;
+        }
+        &-text{
+            margin-left: 0;
+        }
+        .something-more{
+            a{
+                justify-content: center;
+            }
+        }
+        
+    }
+    // instagram collective work
+    .grid-sizer,
+    .grid-item {
+        @include size(32.5%, 200px);
+    }
+    // end instagram collective work
+}
+
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+    section{
+        padding: 80px 0 130px;
+    }
+    .section-header{
+        text-align: left;
+        h2{
+            font-size: 61px;
+            line-height: 81px;
+
+        }
+    }
+    // artists
+    .artists{
+        .col{
+            width: 24%;
+        }
+    } //end artists
+
+    // section featured work
+    .work{
+        .section-header{
+            @include display(flex, space-between);
+            align-items: flex-end;
+        }
+        .col-left{
+            position: relative;
+            @include size(48.75%, 320px);
+            .row{
+                position: absolute;
+                bottom: 0;
+            }
+            .col{
+                margin: 0;
+            }
+        }
+        .col-right{
+            width: 48.75%;
+        }
+    }
+  // end section featured work
+  // aboutUs
+    .aboutUs{
+        padding: 0;
+        height: 362px;
+        &-text{
+            width: 39.25%;
+        }
+        &-img{
+            width: 60%;
+        }
+    } 
+    // end aboutUs
+    // adress
+    .adress{
+        .col{
+            @include size(50%, 295px);
+            width: 50%;
+        }
+    }
+    .our{
+        padding-left: 97px;
+    }
+    iframe{
+        @include size(100%, 100%);
+    }// end adress
+    
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1164px;
+    }
+    // header
+    .nav{
+        display: flex;
+    }
+    .burger{
+        display: none;
+    }
+    .social-networks {
+        display: flex;
+        height: 96px;
+    }
+    // end header
+
+    // design
+    .design{
+        padding: 150px 0;
+        height: 408px;
+        .col{
+            width: auto;
+            flex-direction: row;
+            align-items: initial;
+        }
+        &-text{
+            margin-top: 10px; 
+            margin-left: 30px;
+            text-align: left;
+        }
+        .something-more {
+            a{
+            justify-content: flex-start;
+            } 
+        }
+    }// end design
+    // section featured work
+    .work{
+        .section-header{
+            @include display(flex, space-between);
+            align-items: flex-end;
+        }
+        .col-left{
+            height: 410px;
+        }
+        .col-left .col,
+        .col-right .col{
+            width: auto;
+            margin: 0;
+        }
+    } // end featured work
+
+    // aboutUs
+    .aboutUs{
+        height: 430px;
+        &-text{
+            width: 39.25%;
+        }
+        &-img{
+            width: 649px;
+        }
+    } 
+    // end aboutUs 
+    // instagram collective work
+    .grid-first{
+        .grid-item{
+            margin-left: 4px;
+        }
+        .grid-item:nth-child(2){
+            margin-left: 0;
+        }
+    }
+    .grid-sizer,
+    .grid-item {
+        @include size(220px, 220px);
+        margin-bottom: 11px;
+    }
+    .grid-item--width2{
+        display: block;
+        @include size(450px, 450px);
+      }
+    // end instagram collective work
+
+    // contact form
+    .contact{
+        form{
+            width: 540px;
+        }
+    }
+    // end contact form
+
+    
+}
